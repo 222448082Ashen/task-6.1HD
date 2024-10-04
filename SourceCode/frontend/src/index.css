@@ -1,0 +1,48 @@
+.login-form,
+.signup-form {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.signup-form label,
+.login-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.signup-form input,
+.login-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.signup-form button,
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signup-form button:hover,
+.login-form button:hover {
+    background-color: darkblue;
+}
+
+.signup-form p,
+.login-form p {
+    margin-top: 10px;
+}
+
+.error {
+    color: red;
+}

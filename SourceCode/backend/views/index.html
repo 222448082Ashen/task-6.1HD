@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe</title>
+    <link rel="stylesheet" href="/public/css/styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Subscribe to Newsletter ...</h1>
+        <form id="form">
+            <input type="email" id="email" name="email" placeholder="Enter email address" required>
+            <button type="submit">Subscribe</button>
+        </form>
+        <p id="responseMsg"></p>
+    </div>
+    <script>
+        document.getElementById('form').addEventListener('submit', async function (event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const responseMsg = document.getElementById('responseMsg');
+            const response = await fetch('/subscribe', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email })
+            });
+            responseMsg.textContent = await response.text();
+        });
+    </script>
+</body>
+
+</html>
